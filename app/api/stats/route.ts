@@ -10,14 +10,14 @@ export async function GET() {
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
 
-  const { data: surveillanceData } = await supabase
+  const { count: surveillanceCount } = await supabase
     .from('contracts')
     .select('*', { count: 'exact', head: true })
     .eq('is_surveillance', true)
 
   return NextResponse.json({
     total_contracts: count,
-    surveillance_contracts: surveillanceData,
+    surveillance_contracts: surveillanceCount,
     message: 'Connection successful'
   })
 }
