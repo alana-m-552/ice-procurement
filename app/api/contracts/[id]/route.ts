@@ -23,7 +23,7 @@ export async function GET(
   const { data, error } = await supabase
     .from("contracts")
     .select("*")
-    .eq("award_id_piid", awardId)
+    .eq("contract_transaction_unique_key", awardId)
     .maybeSingle();
 
   if (error) {

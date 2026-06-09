@@ -1,6 +1,7 @@
 export type Confidence = "high" | "medium" | "low";
 
 export interface Contract {
+  contract_transaction_unique_key: string;
   award_id_piid: string;
   recipient_name: string | null;
   transaction_description: string | null;

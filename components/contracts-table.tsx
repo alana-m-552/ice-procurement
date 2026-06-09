@@ -54,12 +54,12 @@ export function ContractsTable({
           </div>
         ) : (
           rows.map((c, idx) => {
-            const active = c.award_id_piid === activeId;
+            const active = c.contract_transaction_unique_key === activeId;
             return (
               <button
                 type="button"
-                key={c.award_id_piid}
-                onClick={() => onRowClick(c.award_id_piid)}
+                key={c.contract_transaction_unique_key}
+                onClick={() => onRowClick(c.contract_transaction_unique_key)}
                 className={`${GRID} w-full border-b border-border text-left transition-colors hover:bg-[#fdf8ec] focus:outline-none focus-visible:ring-1 focus-visible:ring-amber ${
                   active
                     ? "bg-[#fdf8ec]"
