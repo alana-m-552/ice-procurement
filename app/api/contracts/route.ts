@@ -1,4 +1,4 @@
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { NextRequest, NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
@@ -34,6 +34,16 @@ export async function GET(request: NextRequest) {
     (searchParams.get("order") || "desc").toLowerCase() === "asc"
       ? "asc"
       : "desc";
+
+  let supabase;
+  try {
+    supabase = getSupabase();
+  } catch (e) {
+    return NextResponse.json(
+      { error: e instanceof Error ? e.message : "Supabase not configured" },
+      { status: 503 }
+    );
+  }
 
   let query = supabase
     .from("contracts")
