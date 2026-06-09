@@ -2,17 +2,12 @@ import { supabase } from '@/lib/supabase'
 import { NextResponse } from 'next/server'
 
 export async function GET() {
-  const [totalResult, allObligatedResult, surveillanceResult, statesResult] = await Promise.all([
+  const [totalResult, surveillanceResult, statesResult] = await Promise.all([
 
     // Total procurement action count
     supabase
       .from('contracts')
       .select('*', { count: 'exact', head: true }),
-
-    // Total obligated across ALL contracts
-    supabase
-      .from('contracts')
-      .select('federal_action_obligation'),
 
     // All surveillance rows with confidence and obligation
     supabase
@@ -28,10 +23,10 @@ export async function GET() {
       .not('primary_place_of_performance_state_code', 'is', null)
   ])
 
-  // Calculate total obligated across all contracts
-  const totalObligatedAll = allObligatedResult.data?.reduce(
-    (sum, r) => sum + (parseFloat(r.federal_action_obligation) || 0), 0
-  ) ?? 0
+  const { data: obligatedData, error: obligatedError } = await supabase
+    .rpc('sum_all_obligations')
+
+  const totalObligatedAll = obligatedError ? null : (obligatedData ?? 0)
 
   // Calculate surveillance breakdown by confidence
   const breakdown = {
