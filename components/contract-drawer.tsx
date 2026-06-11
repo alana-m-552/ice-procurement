@@ -193,16 +193,6 @@ export function ContractDrawer({
               misrepresentation of actual committed spending.
             </p>
 
-            <a
-              href={`https://www.usaspending.gov/award/${encodeURIComponent(
-                data.award_id_piid
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-block text-xs font-medium text-amber underline underline-offset-2"
-            >
-              View on USASpending.gov ↗
-            </a>
           </>
         )}
       </div>
