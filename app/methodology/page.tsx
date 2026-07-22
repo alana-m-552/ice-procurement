@@ -36,26 +36,6 @@ export default function MethodologyPage() {
       </header>
 
       <div className="px-5">
-        <Section label="Data source">
-          <p>
-            All data in this database was downloaded from USASpending.gov, the
-            official federal spending transparency platform maintained by the
-            U.S. Department of the Treasury under the Digital Accountability and
-            Transparency Act of 2014 (DATA Act). USASpending.gov aggregates
-            procurement data submitted by federal agencies to government-wide
-            systems including the Federal Procurement Data System (FPDS-NG).
-          </p>
-          <p>
-            This dataset covers procurement actions where the awarding agency is
-            U.S. Immigration and Customs Enforcement (ICE), a component of the
-            Department of Homeland Security (DHS), with action dates between June
-            2025 and June 2026. The data was downloaded in June 2026 and reflects
-            the state of USASpending.gov at that time. USASpending.gov notes a
-            90-day reporting delay for some contract data; recent transactions
-            may be underreported.
-          </p>
-        </Section>
-
         <Section label="What this data is — and is not">
           <p>
             The 3,438 records in this database represent individual procurement
