@@ -86,8 +86,7 @@ export function HomeContent() {
         Data reflects federal_action_obligation — funds committed in each
         transaction, including modifications and de-obligations. This figure
         represents net obligated amounts, not disbursed payments and not
-        potential contract ceiling values. Source: USASpending.gov · Downloaded
-        June 2026.
+        potential contract ceiling values. 
       </p>
 
       {/* Featured surveillance actions */}
