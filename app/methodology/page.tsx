@@ -28,15 +28,10 @@ export default function MethodologyPage() {
     <main className="mx-auto max-w-3xl">
       <header className="bg-ink px-5 py-7 text-paper">
         <h1 className="font-serif text-3xl font-bold">Data &amp; methodology</h1>
-        <p className="mt-2 max-w-xl text-sm text-neutral-400">
-          How this database was assembled, the limits of what it represents, and
-          the full surveillance classification logic — including documented
-          exclusions.
-        </p>
       </header>
 
       <div className="px-5">
-        <Section label="Data source">
+        <Section>
           <p>
             This dataset covers procurement actions where the awarding agency is
             U.S. Immigration and Customs Enforcement (ICE), a component of the
