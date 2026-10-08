@@ -19,7 +19,7 @@ export default function AboutPage() {
             ICE Procurement is an independent public accountability project. It
             is not affiliated with the U.S. government, the Department of
             Homeland Security, or any advocacy organization. All data is sourced
-            from USASpending.gov, a public government database. Classifications
+            from public government databases. Classifications
             and analysis are the work of the project&apos;s researchers and are
             documented in full on the methodology page.
           </p>

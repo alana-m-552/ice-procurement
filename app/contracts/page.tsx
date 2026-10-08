@@ -15,10 +15,13 @@ export default function ContractsPage() {
           All procurement actions
         </h1>
         <p className="mt-1 max-w-2xl text-sm text-neutral-400">
-          Every procurement action awarded by U.S. Immigration and Customs
+          Below are the procurement actions awarded by U.S. Immigration and Customs
           Enforcement from June 2025 to June 2026. Search, filter, and click any
-          row for full transaction detail. All dollar figures are net obligated
-          amounts (federal_action_obligation), including de-obligations.
+          row for more details on what ICE acquired, from whom, and how much it cost. 
+          
+          You may also filter for procurement actions flagged as potentially related to surveillance technology. Learn more about the surveillance classification tiers in the methodology section.
+          
+          All dollar figures are net obligated amounts (federal_action_obligation), including de-obligations.
         </p>
       </header>
 
