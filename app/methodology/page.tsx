@@ -31,7 +31,7 @@ export default function MethodologyPage() {
       </header>
 
       <div className="px-5">
-        <Section>
+        <Section label="">
           <p>
             This dataset covers procurement actions where the awarding agency is
             U.S. Immigration and Customs Enforcement (ICE), a component of the
